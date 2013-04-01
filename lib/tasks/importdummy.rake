@@ -13,11 +13,6 @@ task :importdummy => [:environment] do
       Citation.create!(row.to_hash)
   end
 
-  filename = "db/csv/claims.csv"
-  CSV.foreach(filename, :headers => true) do |row|
-      Claim.create!(row.to_hash)
-  end
-
   filename = "db/csv/class.csv"
   CSV.foreach(filename, :headers => true) do |row|
       PatentClass.create!(row.to_hash)

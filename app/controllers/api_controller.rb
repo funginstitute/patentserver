@@ -2,7 +2,9 @@ class ApiController < ApplicationController
   include ApiHelper
   
   before_filter :find_user_by_api_key
-  
+  before_filter do |c| 
+    c.params = query_values_to_upcase(params)
+  end
 private
 
   #TODO This is ugly shit.

@@ -42,6 +42,7 @@ group :test, :development do
   gem 'guard-cucumber'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'growl'
+  gem 'spork-rails'
 #  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
@@ -51,5 +52,4 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'rspec-rails', '~> 2.12.2'
   gem 'factory_girl_rails', '~> 4.2.0'
-  gem 'email_spec'
 end
